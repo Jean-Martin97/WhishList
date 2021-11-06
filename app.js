@@ -4,14 +4,14 @@ const PRODUCTS = [
     {category: "Photographie", price: "170 €", name: "Objectif Nikkor 35mm", lien: "https://www.mediamarkt.be/fr/product/_nikon-objectif-standard-af-s-dx-nikkor-35mm-f1-8g-jaa132da-1094649.html"},
     {category: "Photographie", price: "115 €", name: "Flash pour appareil photo millieu de gamme", lien: "https://www.photogalerie.com/flash-speedlite-yongnuo-yn-568ex-iii-pour-nikon?gclid=CjwKCAjwoP6LBhBlEiwAvCcthBMBmEE3jH5iKWEGHmToAoww86tWUCJTp2EOvifsz3TqQ-3lTZ9n4xoCcvIQAvD_BwE"},
     {category: "Photographie", price: "60 €", name: "Flash pour appareil photo bas de gamme", lien: "https://www.amazon.fr/Neewer®-Speedlite-Affichage-Numérique-Standard/dp/B010XCEABO/ref=as_li_ss_tl?__mk_fr_FR=ÅMÅŽÕÑ&keywords=flash+neewer&qid=1581247623&s=electronics&sr=1-12&linkCode=sl1&tag=httpprogresen-21&linkId=88359fb94ba6e30b2eac540cd99512d4&language=fr_FR"},
-    {category: "Photographie", price: "30 à 70 €", name: "Filtres 67mm ou 52mm (si objecif 35mm) ou 58mm (si objectif 50mm)", lien: "https://coolblue.be ou https://amazon.be"},
+    {category: "Photographie", price: "30 à 70 €", name: "Filtres 67mm ou 52mm (si objecif 35mm) ou 58mm (si objectif 50mm)", lien: "https://coolblue.be ou https://amazon.fr"},
     {category: "Burreau", price: "100 €", name: "Souris sans fils Logitech G502", lien: "https://www.mediamarkt.be/fr/product/_logitech-souris-gamer-sans-fil-g502-hero-25k-910-005568-1821335.html"},
     {category: "Burreau", price: "500 €", name: "Chaise gaming Secret lab Titan evo 2022", lien: "https://secretlab.eu/fr/products/titan-evo-2022-series?sku=R22SW-CnC"},
     {category: "Alcool", price: "50 €", name: "Don papa", lien: "David Sanna"},
     {category: "Alcool", price: "10 à 50 €", name: "Vin rouge", lien: "Delhaize"},
-    {category: "Alcool", price: "15 à 40 €", name: "Verre à bière/rhum", lien: "https://amazon.be ou Andrien"},
+    {category: "Alcool", price: "15 à 40 €", name: "Verre à bière/rhum", lien: "https://amazon.fr ou Andrien"},
     {category: "Décoration", price: "30 €", name: "Déco mural avec une photo que j'ai réalisé", lien: "https://www.myposter.be/fr/"},
-    {category: "Décoration", price: "20 à 100 €", name: "Figurine d'un animé (one piece, naruto, demon slayer, hunter x hunter, tokyo revenger)", lien: "https://amazon.be ou https://mangahako.com"},
+    {category: "Décoration", price: "20 à 100 €", name: "Figurine d'un animé (one piece, naruto, demon slayer, hunter x hunter, tokyo revenger)", lien: "https://amazon.fr ou https://mangahako.com"},
     {category: "Décoration", price: "40 €", name: "cadre d'un animé (one piece, naruto, hunter x hunter, tokyo revenger)", lien: "https://displate.com"},
     {category: "Décoration", price: "50 à 100 €", name: "Lampadaire", lien: "https://www.maisonsdumonde.com/BE/fr/q/lampadaire"},
     {category: "Habits", price: "50 à 100 €", name: "Chaussures", lien: ""},
@@ -32,13 +32,24 @@ const PRODUCTS = [
 ];
 
 function ProductRow ({products}) {
-    let lien = products.lien
-    if(products.lien.indexOf("https://") >= 0)
-        lien = <a href={products.lien}>{products.lien}</a>
+    let tabLien = products.lien.split(" ")
+    for(let i = 0; i < tabLien.length; i++)
+    {
+        if(tabLien[i].indexOf("https://") >= 0)
+            tabLien[i] = <a href={tabLien[i]}>{tabLien[i]}</a>
+    }
+
+    let tabFinal = []
+    for (let i = 0; i < tabLien.length; i++) {
+        const element = tabLien[i]
+        tabFinal[i*2] = element
+        tabFinal[(i*2)+1] = " "
+    }
+    
     return <tr>
             <td>{products.name}</td>
             <td>{products.price}</td>
-            <td>{lien}</td>
+            <td>{tabFinal}</td>
     </tr>
     
 }
