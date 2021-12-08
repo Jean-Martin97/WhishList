@@ -1,11 +1,11 @@
 const PRODUCTS = [
-    {category: "Photographie", price: "400 €", name: "Objectif Nikkor 85mm", lien: "https://www.backmarket.fr/objectif-nikon-af-s-nikkor-85mm-f18g-pas-cher/25523.html#l=10"},
-    {category: "Photographie", price: "200 €", name: "Objectif Nikkor 50mm", lien: "https://www.backmarket.fr/objectif-nikon-pas-cher/511317.html#l=11"},
-    {category: "Photographie", price: "130 €", name: "Objectif Nikkor 35mm", lien: "https://www.backmarket.fr/nikon-dx-afs-nikkor-35mm-f18g-pas-cher/428405.html#l=10"},
+    {category: "Photographie", price: "400 €", name: "Objectif Nikkor 85mm", lien: "https://www.fr.fnac.be/Objectif-Reflex-Nikon-AF-S-FX-85mm-f-1-8-Nikkor-Serie-G/a4112365"},
+    {category: "Photographie", price: "220 €", name: "Objectif Nikkor 50mm", lien: "https://www.coolblue.be/fr/produit/133084/nikon-af-s-50-mm-f-1-8-g.html"},
+    {category: "Photographie", price: "169 €", name: "Objectif Nikkor 35mm", lien: "https://www.mediamarkt.be/fr/product/_nikon-objectif-standard-af-s-dx-nikkor-35mm-f1-8g-jaa132da-1094649.html?gclid=Cj0KCQiAzMGNBhCyARIsANpUkzOpWJZO6vbZJx6fU7zwCm87-zoDKQFAYf6HRoYWwGcF7DMdUUIlSIgaAgfEEALw_wcB&gclsrc=aw.ds"},
     {category: "Photographie", price: "115 €", name: "Flash pour appareil photo millieu de gamme", lien: "https://www.photogalerie.com/flash-speedlite-yongnuo-yn-568ex-iii-pour-nikon?gclid=CjwKCAjwoP6LBhBlEiwAvCcthBMBmEE3jH5iKWEGHmToAoww86tWUCJTp2EOvifsz3TqQ-3lTZ9n4xoCcvIQAvD_BwE"},
     {category: "Photographie", price: "60 €", name: "Flash pour appareil photo bas de gamme", lien: "https://www.amazon.fr/Neewer®-Speedlite-Affichage-Numérique-Standard/dp/B010XCEABO/ref=as_li_ss_tl?__mk_fr_FR=ÅMÅŽÕÑ&keywords=flash+neewer&qid=1581247623&s=electronics&sr=1-12&linkCode=sl1&tag=httpprogresen-21&linkId=88359fb94ba6e30b2eac540cd99512d4&language=fr_FR"},
     {category: "Photographie", price: "30 à 70 €", name: "Filtres 67mm ou 52mm (si objecif 35mm) ou 58mm (si objectif 50mm)", lien: "https://coolblue.be ou https://amazon.fr"},
-    {category: "Burreau", price: "100 €", name: "Souris sans fils Logitech G502", lien: "https://www.amazon.fr/Logitech-G502-Lightspeed-Programmables-Ordinateur/dp/B07QKC4WWD/ref=psdc_430335031_t2_B07Y8QWZDW?th=1"},
+    {category: "Burreau", price: "70 €", name: "Souris sans fils Logitech G502", lien: "https://www.amazon.fr/Logitech-G502-Lightspeed-Programmables-Ordinateur/dp/B07QKC4WWD/ref=psdc_430335031_t2_B07Y8QWZDW?th=1"},
     {category: "Burreau", price: "500 €", name: "Chaise gaming Secret lab Titan evo 2022", lien: "https://secretlab.eu/fr/products/titan-evo-2022-series?sku=R22SW-CnC"},
     {category: "Alcool", price: "50 €", name: "Don papa", lien: "David Sanna"},
     {category: "Alcool", price: "10 à 50 €", name: "Vin rouge", lien: "Delhaize"},
@@ -36,7 +36,7 @@ function ProductRow ({products}) {
     for(let i = 0; i < tabLien.length; i++)
     {
         if(tabLien[i].indexOf("https://") >= 0)
-            tabLien[i] = <a href={tabLien[i]}>{tabLien[i]}</a>
+            tabLien[i] = <a href={tabLien[i]} target="_blank">{tabLien[i]}</a>
     }
 
     let tabFinal = []
