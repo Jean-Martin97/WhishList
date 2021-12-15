@@ -5,7 +5,7 @@ const PRODUCTS = [
     {category: "Photographie", price: "115 €", name: "Flash pour appareil photo millieu de gamme", rate: "4.5", lien: "https://www.photogalerie.com/flash-speedlite-yongnuo-yn-568ex-iii-pour-nikon?gclid=CjwKCAjwoP6LBhBlEiwAvCcthBMBmEE3jH5iKWEGHmToAoww86tWUCJTp2EOvifsz3TqQ-3lTZ9n4xoCcvIQAvD_BwE"},
     {category: "Photographie", price: "60 €", name: "Flash pour appareil photo bas de gamme", rate: "4.2", lien: "https://www.amazon.fr/Neewer®-Speedlite-Affichage-Numérique-Standard/dp/B010XCEABO/ref=as_li_ss_tl?__mk_fr_FR=ÅMÅŽÕÑ&keywords=flash+neewer&qid=1581247623&s=electronics&sr=1-12&linkCode=sl1&tag=httpprogresen-21&linkId=88359fb94ba6e30b2eac540cd99512d4&language=fr_FR"},
     {category: "Photographie", price: "30 à 70 €", name: "Filtres 67mm ou 52mm (si objecif 35mm) ou 58mm (si objectif 50mm)", rate: "3", lien: "https://coolblue.be ou https://amazon.fr"},
-    {category: "Burreau", price: "70 €", name: "Souris sans fils Logitech G502", rate: "4.9", lien: "https://www.amazon.fr/Logitech-G502-Lightspeed-Programmables-Ordinateur/dp/B07QKC4WWD/ref=psdc_430335031_t2_B07Y8QWZDW?th=1"},
+    {category: "Burreau", price: "85 €", name: "Souris sans fils Logitech G502", rate: "4.9", lien: "https://www.amazon.fr/Logitech-G502-Lightspeed-Programmables-Ordinateur/dp/B07QKC4WWD/ref=psdc_430335031_t2_B07Y8QWZDW?th=1"},
     {category: "Alcool", price: "50 €", name: "Don papa", rate: "4", lien: "David Sanna"},
     {category: "Alcool", price: "10 à 50 €", name: "Vin rouge", rate: "3", lien: "Delhaize"},
     {category: "Alcool", price: "15 à 40 €", name: "Verre à bière/rhum", rate: "4", lien: "https://amazon.fr ou Andrien"},
