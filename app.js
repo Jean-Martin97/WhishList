@@ -39,7 +39,7 @@ function ProductRow ({products}) {
         tabFinal[(i*2)+1] = " "
     }
 
-    let tabName = products.lien.split(" ")
+    let tabName = products.name.split(" ")
     for(let i = 0; i < tabName.length; i++)
     {
         if(tabName[i].indexOf("https://") >= 0)
